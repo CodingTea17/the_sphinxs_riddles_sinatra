@@ -5,7 +5,8 @@ require('./lib/sphinx')
 
 get('/') do
   new_riddle = Riddle.new
-  @the_page_riddle = new_riddle.this_riddle.keys.first
+  @the_page_riddle = new_riddle.this_riddle[0].keys.first
+  @the_page_riddle2 = new_riddle.this_riddle[1].keys.first
   erb(:index)
 end
 
